@@ -13,7 +13,9 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
 * ⚡ **[BAIXAR MODPACK CURSEFORGE - VERSÃO PC FRACO / LITE (39.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/CURSEFORGE_IMPORT_PC_FRACO_LITE.zip)** *(Recomendado para PCs mais fracos / 8 GB a 12 GB de RAM — entra no mesmo servidor!)*
 
 ### 🏴‍☠️ Para Quem Usa TLAUNCHER ou SKLAUNCHER (Sem Minecraft Original)
-* ⚡ **[BAIXAR INSTALADOR TURBO (TLAUNCHER / SKLAUNCHER) - COMPLETO + PC FRACO LITE (38.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)** *(Arquivo super leve com todas as configs/KubeJS/atalhos + instalador automático de 1 clique que baixa os mods direto dos servidores oficiais em alta velocidade!)*
+* 🚀 **[BAIXAR MODPACK TLAUNCHER - VERSÃO COMPLETA COM TODOS OS MODS DENTRO (1.24 GB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/2_PACK_AMIGOS_TLAUNCHER.zip)** *(Já vem com a pasta `mods` inteira com os 213 `.jar`, shaders, configs, KubeJS e atalhos — é só extrair na pasta e jogar!)*
+* 🍃 **[BAIXAR MODPACK TLAUNCHER - VERSÃO PC FRACO LITE COM OS MODS DENTRO (1.23 GB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/4_PACK_PC_FRACO_LITE_TLAUNCHER.zip)** *(Já vem com a pasta `mods` inteira sem os efeitos pesados, pronta para extrair e jogar em PC fraco!)*
+* ⚡ **[OPCIONAL: INSTALADOR TURBO TLAUNCHER / SKLAUNCHER (38.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)** *(Versão com instalador `.bat` que baixa os mods pelos servidores oficiais — tem a opção **2_CLIQUE_AQUI_INSTALAR_PC_FORTE_COMPLETO.bat** para a Versão Completa e a opção **1_CLIQUE_AQUI_INSTALAR_PC_FRACO_LITE.bat** para PC Fraco!)*
 
 > 💡 **Veja todos os arquivos na página de Releases:** [https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/tag/v2.0](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/tag/v2.0)
 
