@@ -13,8 +13,7 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
 * ⚡ **[BAIXAR MODPACK CURSEFORGE - VERSÃO PC FRACO / LITE (39.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/CURSEFORGE_IMPORT_PC_FRACO_LITE.zip)** *(Recomendado para PCs mais fracos / 8 GB a 12 GB de RAM — entra no mesmo servidor!)*
 
 ### 🏴‍☠️ Para Quem Usa TLAUNCHER (Sem Minecraft Original)
-* ⚡ **[BAIXAR PACK TLAUNCHER - VERSÃO PC FRACO / LITE (1.23 GB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/4_PACK_PC_FRACO_LITE_TLAUNCHER.zip)** *(Mais leve, sem sombras/luzes dinâmicas pesadas, ideal para rodar liso sem travar!)*
-* 🚀 **[BAIXAR PACK TLAUNCHER - VERSÃO COMPLETA (1.24 GB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/2_PACK_AMIGOS_TLAUNCHER.zip)** *(Com todos os efeitos visuais e shaders)*
+* ⚡ **[BAIXAR INSTALADOR TURBO TLAUNCHER - COMPLETO + PC FRACO LITE (38.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)** *(Arquivo super leve com todas as configs/KubeJS/atalhos + instalador automático de 1 clique que baixa os mods direto dos servidores oficiais em alta velocidade!)*
 
 > 💡 **Veja todos os arquivos na página de Releases:** [https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/tag/v2.0](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/tag/v2.0)
 
@@ -23,7 +22,7 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
 ## 🛠️ 2. COMO INSTALAR (Passo a Passo)
 
 ### Opção A: Instalação no CurseForge (Minecraft Original)
-1. Baixe um dos arquivos **CurseForge** acima (`CURSEFORGE_IMPORT_COMPLETO.zip` ou `CURSEFORGE_IMPORT_PC_FRACO_LITE.zip`).
+1. Baixe um dos arquivos **CurseForge** acima (`CURSEFORGE_IMPORT_COMPLETO.zip` para PC Forte ou `CURSEFORGE_IMPORT_PC_FRACO_LITE.zip` para PC Fraco).
 2. Abra o aplicativo **CurseForge** e vá em **Minecraft**.
 3. Clique no botão **+ Create Custom Profile** no canto superior direito.
 4. Clique na palavra sublinhada **import** (*"Or **import** a previously exported profile"*).
@@ -32,8 +31,8 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
 
 ---
 
-### Opção B: Instalação no TLauncher
-1. Baixe o arquivo do **TLauncher** acima (`4_PACK_PC_FRACO_LITE_TLAUNCHER.zip` ou `2_PACK_AMIGOS_TLAUNCHER.zip`).
+### Opção B: Instalação no TLauncher (Com Instalador Turbo)
+1. Baixe o arquivo **[TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)** acima.
 2. Abra o **TLauncher** (atualizado) e clique no botão **TL Mods** (canto inferior direito).
 3. Clique em **Criar (Create)** no topo e preencha:
    - **Nome:** `Integrated Boogaloo Ultimate`
@@ -43,10 +42,13 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
 4. Clique na **Engrenagem** (canto inferior direito do TLauncher) → **Configurações** e ajuste a **Alocação de Memória (RAM)**:
    - Se você tem **16 GB de RAM**: coloque **`8500 MB`**.
    - Se você tem **12 GB de RAM**: coloque **`6500 MB`**.
-   - Se você tem **8 GB de RAM**: coloque **`5500 MB`** (e use a versão **PC Fraco / Lite**!).
+   - Se você tem **8 GB de RAM**: coloque **`5500 MB`**.
 5. Aperte `Windows + R` no teclado, digite `%appdata%\.minecraft\versions\Integrated Boogaloo Ultimate` e dê Enter (ou clique com botão direito no modpack dentro do TL Mods → **Abrir Pasta**).
-6. Extraia **todo o conteúdo** do `.zip` baixado (`mods`, `config`, `kubejs`, `defaultconfigs`, `resourcepacks`, `options.txt`) diretamente dentro dessa pasta, clicando em **Substituir os arquivos no destino**.
-7. Selecione a versão `Integrated Boogaloo Ultimate` no TLauncher e clique em **Entrar no Jogo**!
+6. Extraia **todo o conteúdo** do `TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip` diretamente dentro dessa pasta, clicando em **Substituir os arquivos no destino**.
+7. Dentro da pasta, dê **dois cliques** em:
+   - **`1_CLIQUE_AQUI_INSTALAR_PC_FRACO_LITE.bat`** *(se o seu PC for mais fraco — instala sem sombras/luzes pesadas e com gráficos otimizados)*; **OU**
+   - **`2_CLIQUE_AQUI_INSTALAR_PC_FORTE_COMPLETO.bat`** *(se o seu PC for forte — instala com todos os efeitos visuais)*.
+8. O script vai baixar todos os mods automaticamente na pasta `mods` e avisar quando terminar. Depois é só clicar em **Entrar no Jogo** no TLauncher!
 
 ---
 
