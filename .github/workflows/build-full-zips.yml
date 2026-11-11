@@ -1,0 +1,102 @@
+name: Build and Upload Full TLauncher Packs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/build-full-zips.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-packs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Turbo Base Zip from Release v2.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p base_pack
+          gh release download v2.0 -p "TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip" -D .
+          unzip -q TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip -d base_pack
+
+      - name: Download all 213 mods on GitHub Cloud (10 Gbps) and package Full & Lite zips
+        run: |
+          python3 - << 'EOF'
+          import os, json, urllib.request, zipfile
+          from concurrent.futures import ThreadPoolExecutor
+
+          with open("base_pack/mods_urls.json", "r", encoding="utf-8") as f:
+              mods_list = json.load(f)
+
+          os.makedirs("mods_downloaded", exist_ok=True)
+
+          def download_one(item):
+              fn = item["file"]
+              url = item["url"]
+              dest = os.path.join("mods_downloaded", fn)
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=60) as resp, open(dest, "wb") as out:
+                  out.write(resp.read())
+              return fn
+
+          print(f"Downloading {len(mods_list)} mods in parallel...")
+          with ThreadPoolExecutor(max_workers=16) as ex:
+              results = list(ex.map(download_one, mods_list))
+          print(f"Successfully downloaded {len(results)} mods!")
+
+          def add_dir(zf, src_dir, arc_prefix, exclude=None):
+              exclude = exclude or set()
+              for root, _, files in os.walk(src_dir):
+                  for fn in files:
+                      if fn in exclude:
+                          continue
+                      full_p = os.path.join(root, fn)
+                      rel_p = os.path.relpath(full_p, src_dir)
+                      arc_name = os.path.join(arc_prefix, rel_p).replace("\\", "/")
+                      ext = os.path.splitext(fn)[1].lower()
+                      comp = zipfile.ZIP_STORED if ext in (".jar", ".zip", ".png", ".ogg") else zipfile.ZIP_DEFLATED
+                      zf.write(full_p, arc_name, compress_type=comp)
+
+          # 1. Build 2_PACK_AMIGOS_TLAUNCHER.zip (Full Version)
+          print("Packaging 2_PACK_AMIGOS_TLAUNCHER.zip...")
+          with zipfile.ZipFile("2_PACK_AMIGOS_TLAUNCHER.zip", "w") as zf:
+              for item in mods_list:
+                  fn = item["file"]
+                  zf.write(os.path.join("mods_downloaded", fn), f"mods/{fn}", compress_type=zipfile.ZIP_STORED)
+              add_dir(zf, "base_pack/config", "config", exclude={"boogaloo_core-options.txt"})
+              zf.write("base_pack/options_normal.txt", "config/boogaloo_core-options.txt", compress_type=zipfile.ZIP_DEFLATED)
+              for d in ["kubejs", "defaultconfigs", "resourcepacks", "shaderpacks"]:
+                  p = os.path.join("base_pack", d)
+                  if os.path.exists(p):
+                      add_dir(zf, p, d)
+              zf.write("base_pack/options_normal.txt", "options.txt", compress_type=zipfile.ZIP_DEFLATED)
+
+          # 2. Build 4_PACK_PC_FRACO_LITE_TLAUNCHER.zip (Lite Version)
+          print("Packaging 4_PACK_PC_FRACO_LITE_TLAUNCHER.zip...")
+          with zipfile.ZipFile("4_PACK_PC_FRACO_LITE_TLAUNCHER.zip", "w") as zf:
+              for item in mods_list:
+                  if item.get("lite_exclude"):
+                      continue
+                  fn = item["file"]
+                  zf.write(os.path.join("mods_downloaded", fn), f"mods/{fn}", compress_type=zipfile.ZIP_STORED)
+              add_dir(zf, "base_pack/config", "config", exclude={"boogaloo_core-options.txt"})
+              zf.write("base_pack/options_lite.txt", "config/boogaloo_core-options.txt", compress_type=zipfile.ZIP_DEFLATED)
+              for d in ["kubejs", "defaultconfigs", "resourcepacks"]:
+                  p = os.path.join("base_pack", d)
+                  if os.path.exists(p):
+                      add_dir(zf, p, d)
+              zf.write("base_pack/options_lite.txt", "options.txt", compress_type=zipfile.ZIP_DEFLATED)
+
+          print("Both zips built successfully!")
+          EOF
+
+      - name: Upload Full Zips to GitHub Release v2.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload v2.0 2_PACK_AMIGOS_TLAUNCHER.zip 4_PACK_PC_FRACO_LITE_TLAUNCHER.zip --clobber
