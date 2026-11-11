@@ -12,8 +12,8 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
 * 🚀 **[BAIXAR MODPACK CURSEFORGE - VERSÃO COMPLETA (39.8 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/CURSEFORGE_IMPORT_COMPLETO.zip)** *(Recomendado para PCs com 16 GB de RAM e placa de vídeo dedicada)*
 * ⚡ **[BAIXAR MODPACK CURSEFORGE - VERSÃO PC FRACO / LITE (39.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/CURSEFORGE_IMPORT_PC_FRACO_LITE.zip)** *(Recomendado para PCs mais fracos / 8 GB a 12 GB de RAM — entra no mesmo servidor!)*
 
-### 🏴‍☠️ Para Quem Usa TLAUNCHER (Sem Minecraft Original)
-* ⚡ **[BAIXAR INSTALADOR TURBO TLAUNCHER - COMPLETO + PC FRACO LITE (38.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)** *(Arquivo super leve com todas as configs/KubeJS/atalhos + instalador automático de 1 clique que baixa os mods direto dos servidores oficiais em alta velocidade!)*
+### 🏴‍☠️ Para Quem Usa TLAUNCHER ou SKLAUNCHER (Sem Minecraft Original)
+* ⚡ **[BAIXAR INSTALADOR TURBO (TLAUNCHER / SKLAUNCHER) - COMPLETO + PC FRACO LITE (38.3 MB)](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)** *(Arquivo super leve com todas as configs/KubeJS/atalhos + instalador automático de 1 clique que baixa os mods direto dos servidores oficiais em alta velocidade!)*
 
 > 💡 **Veja todos os arquivos na página de Releases:** [https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/tag/v2.0](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/tag/v2.0)
 
@@ -49,6 +49,30 @@ Escolha abaixo o arquivo correspondente ao seu Launcher e ao seu PC:
    - **`1_CLIQUE_AQUI_INSTALAR_PC_FRACO_LITE.bat`** *(se o seu PC for mais fraco — instala sem sombras/luzes pesadas e com gráficos otimizados)*; **OU**
    - **`2_CLIQUE_AQUI_INSTALAR_PC_FORTE_COMPLETO.bat`** *(se o seu PC for forte — instala com todos os efeitos visuais)*.
 8. O script vai baixar todos os mods automaticamente na pasta `mods` e avisar quando terminar. Depois é só clicar em **Entrar no Jogo** no TLauncher!
+
+---
+
+### Opção C: Instalação no SKlauncher (2 Formas: Importação Direta ou Instalador Turbo)
+
+#### Forma 1 — Pelo Instalador Turbo (Funciona 100% em qualquer versão do SKlauncher):
+1. Baixe o arquivo **[TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip)**.
+2. Abra o **SKlauncher** e clique em **Gerenciador de Instalações** (*Installations Manager*) → **+ Nova Instalação** (*New Installation*).
+3. Configure a instalação:
+   - **Nome:** `Integrated Boogaloo Ultimate`
+   - **Modloader:** Selecione **NeoForge**
+   - **Versão do Jogo:** `1.21.1` (Versão do NeoForge: `21.1.264`)
+   - **Diretório do Jogo (Game Directory):** Ative a opção de pasta separada / instância própria (para não misturar com o seu `.minecraft` padrão).
+   - **Memória RAM (Mais Opções / Configurações):** Coloque **`8500 MB`** (16 GB RAM), **`6500 MB`** (12 GB RAM) ou **`5500 MB`** (8 GB RAM).
+   - Clique em **Salvar (Save)**.
+4. Na lista de instalações do SKlauncher, passe o mouse sobre a instalação `Integrated Boogaloo Ultimate` e clique no ícone da **Pastinha (Abrir Pasta / Open Folder)**.
+5. Extraia **todo o conteúdo** do `TLAUNCHER_INSTALADOR_TURBO_COMPLETO_E_LITE.zip` diretamente dentro dessa pasta que abriu.
+6. Dê **dois cliques** em **`1_CLIQUE_AQUI_INSTALAR_PC_FRACO_LITE.bat`** (para PC fraco) ou **`2_CLIQUE_AQUI_INSTALAR_PC_FORTE_COMPLETO.bat`** (para PC forte).
+7. Assim que aparecer *"INSTALAÇÃO CONCLUÍDA COM SUCESSO"*, volte no SKlauncher e clique em **Jogar (Play)**!
+
+#### Forma 2 — Importação Direta de Modpack (SKlauncher 3.2+):
+1. Baixe o arquivo do CurseForge (**[CURSEFORGE_IMPORT_PC_FRACO_LITE.zip](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/CURSEFORGE_IMPORT_PC_FRACO_LITE.zip)** ou **[CURSEFORGE_IMPORT_COMPLETO.zip](https://github.com/ErickdeFaria/integrated-boogaloo-ultimate/releases/download/v2.0/CURSEFORGE_IMPORT_COMPLETO.zip)**).
+2. No SKlauncher, vá em **Modpacks / Instalações** → clique em **Importar (Import)** e selecione o arquivo `.zip` baixado.
+3. Ajuste a memória RAM da instância criada nas configurações do SKlauncher e clique em **Jogar**!
 
 ---
 
